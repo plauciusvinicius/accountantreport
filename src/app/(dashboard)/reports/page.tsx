@@ -89,7 +89,7 @@ export default async function ReportsPage() {
                               {report.company_name ?? "—"}
                             </p>
                             <p className="text-xs text-muted-foreground truncate max-w-[140px]">
-                              {(report.documents as { file_name: string } | null)?.file_name ?? ""}
+                              {(Array.isArray(report.documents) ? report.documents[0] : report.documents as { file_name: string } | null)?.file_name ?? ""}
                             </p>
                           </div>
                         </div>

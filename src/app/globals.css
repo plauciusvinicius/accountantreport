@@ -1,134 +1,85 @@
-@import "tailwindcss";
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@custom-variant dark (&:is(.dark *));
+@layer base {
+  :root {
+    --background: 0 0% 99%;
+    --foreground: 222 65% 15%;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-sans);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
-  --color-ring: var(--ring);
-  --color-input: var(--input);
-  --color-border: var(--border);
-  --color-destructive: var(--destructive);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-accent: var(--accent);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-muted: var(--muted);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-secondary: var(--secondary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-primary: var(--primary);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-popover: var(--popover);
-  --color-card-foreground: var(--card-foreground);
-  --color-card: var(--card);
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
-  --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6);
-  /* Group Legacy custom colors */
-  --color-navy: #0d1b3e;
-  --color-navy-light: #1a2d5a;
-  --color-gold: #c9a84c;
-  --color-gold-light: #d9bc72;
-  --color-silver: #b0b0b0;
-}
+    --card: 0 0% 100%;
+    --card-foreground: 222 65% 15%;
 
-:root {
-  /* Group Legacy Brand — Light Theme */
-  --background: oklch(0.99 0 0);
-  --foreground: oklch(0.12 0.04 252);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.12 0.04 252);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.12 0.04 252);
-  /* Primary = Navy Blue */
-  --primary: oklch(0.22 0.07 252);
-  --primary-foreground: oklch(1 0 0);
-  /* Secondary = Gold */
-  --secondary: oklch(0.73 0.10 82);
-  --secondary-foreground: oklch(0.15 0.04 252);
-  --muted: oklch(0.96 0.01 252);
-  --muted-foreground: oklch(0.50 0.03 252);
-  /* Accent = Gold */
-  --accent: oklch(0.73 0.10 82);
-  --accent-foreground: oklch(0.15 0.04 252);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.90 0.02 252);
-  --input: oklch(0.92 0.01 252);
-  --ring: oklch(0.73 0.10 82);
-  --chart-1: oklch(0.22 0.07 252);
-  --chart-2: oklch(0.73 0.10 82);
-  --chart-3: oklch(0.60 0.04 252);
-  --chart-4: oklch(0.45 0.06 252);
-  --chart-5: oklch(0.35 0.05 252);
-  --radius: 0.5rem;
-  --sidebar: oklch(0.15 0.05 252);
-  --sidebar-foreground: oklch(0.95 0 0);
-  --sidebar-primary: oklch(0.73 0.10 82);
-  --sidebar-primary-foreground: oklch(0.15 0.04 252);
-  --sidebar-accent: oklch(0.22 0.07 252);
-  --sidebar-accent-foreground: oklch(0.95 0 0);
-  --sidebar-border: oklch(0.25 0.05 252);
-  --sidebar-ring: oklch(0.73 0.10 82);
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 65% 15%;
+
+    --primary: 222 65% 15%;
+    --primary-foreground: 43 56% 55%;
+
+    --secondary: 43 56% 55%;
+    --secondary-foreground: 222 65% 15%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 15% 50%;
+
+    --accent: 43 56% 55%;
+    --accent-foreground: 222 65% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 214 30% 91%;
+    --input: 214 30% 91%;
+    --ring: 222 65% 15%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 222 65% 15%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 43 56% 55%;
+    --sidebar-primary-foreground: 222 65% 15%;
+    --sidebar-accent: 222 55% 20%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 222 55% 22%;
+    --sidebar-ring: 43 56% 55%;
+  }
+
+  .dark {
+    --background: 222 65% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 222 60% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 222 60% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 43 56% 55%;
+    --primary-foreground: 222 65% 15%;
+
+    --secondary: 222 55% 20%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 222 55% 18%;
+    --muted-foreground: 215 15% 65%;
+
+    --accent: 43 56% 55%;
+    --accent-foreground: 222 65% 15%;
+
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 222 50% 20%;
+    --input: 222 50% 20%;
+    --ring: 43 56% 55%;
+  }
 }
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
-  }
-  html {
-    @apply font-sans;
-  }
-}
-
-/* Group Legacy utility classes */
-@layer utilities {
-  .bg-navy {
-    background-color: #0d1b3e;
-  }
-  .bg-navy-light {
-    background-color: #1a2d5a;
-  }
-  .text-gold {
-    color: #c9a84c;
-  }
-  .bg-gold {
-    background-color: #c9a84c;
-  }
-  .border-gold {
-    border-color: #c9a84c;
-  }
-  .text-silver {
-    color: #b0b0b0;
-  }
-  .gradient-navy {
-    background: linear-gradient(135deg, #0d1b3e 0%, #1a2d5a 100%);
-  }
-  .gradient-gold {
-    background: linear-gradient(135deg, #c9a84c 0%, #d9bc72 100%);
   }
 }
