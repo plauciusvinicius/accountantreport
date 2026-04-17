@@ -4,7 +4,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
   return (
     <div className="min-h-screen flex">
       {/* Painel esquerdo — identidade Group Legacy */}
-      <div className="hidden lg:flex lg:w-1/2 gradient-navy flex-col justify-between p-12 relative overflow-hidden">
+      <div className="hidden lg:flex lg:w-1/2 bg-[#0d1b3e] flex-col justify-between p-12 relative overflow-hidden">
         {/* Decoração geométrica de fundo */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-[-10%] left-[-10%] w-96 h-96 rounded-full border border-[#c9a84c]" />
