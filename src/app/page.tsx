@@ -62,7 +62,7 @@ export default function Home() {
               </Button>
             </Link>
             <Link href="/login">
-              <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 px-8 h-12 text-base">
+              <Button size="lg" variant="outline" className="border-white bg-white text-[#0d1b3e] font-semibold hover:bg-[#0d1b3e] hover:text-[#c9a84c] hover:border-white px-8 h-12 text-base transition-colors">
                 Já tenho conta
               </Button>
             </Link>
